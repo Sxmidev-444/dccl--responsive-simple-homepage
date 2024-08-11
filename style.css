@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+    background: #F2F9FE;
+    height: 100vh;
+    width: 100%;
+}
+
+.container {
+  padding: 0 70px;
+  max-width: 1280px;
+  display: grid;
+  margin: auto;
+  gap: 92px;
+}
+
+/* NAVBAR */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 0 0 0;
+  font-size: 1rem;
+}
+
+.nav__links {
+  display: flex;
+  gap: 40px;
+
+}
+
+.link {
+  color: #647285;
+  font-weight: 600;
+}
+
+.about {
+  color: #223344;
+  font-weight: 600;
+}
+
+input {
+  display: none;
+}
+
+#mode {
+  background: #223344;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  padding: 3px;
+  gap: 4px;
+  cursor: pointer;
+  position: relative;
+}
+
+#mode img {
+  height: 20px;
+}
+
+#circulo {
+  position: absolute;
+  right: 3px;
+  background: #F2F9FF;
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+}
+
+#circulo.circulo {
+  left: 3px;
+}
+
+#sun,#moon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  padding: 2px;
+  z-index: 1;
+}
+
+
+#sun.sun {
+  filter: invert(98%) sepia(100%) saturate(9%) hue-rotate(148deg) brightness(103%) contrast(102%);
+}
+
+
+#menu__toggle {
+  border: none;
+  background: none;
+  color: #223344;
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
+}
+
+.container__links {
+  display: flex;
+  justify-content: space-between;
+  width: 65%;
+}
+
+/* Content */
+
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 55px;
+}
+
+
+
+.content__hero img {
+  width: 100%;
+  max-height: 550px;
+}
+
+.content__text {
+  display: grid;
+  padding-left: 20px;
+}
+span {
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #223344;
+}
+
+.title {
+  font-size: 3.75rem;
+  font-weight: 700;
+  color: #223344;
+  max-width: 457px;
+  margin-top: 12px;
+
+}
+.description {
+  font-size: 1.125rem;
+  color: #647285;
+  margin-top: 32px;
+  max-width: 457px;
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-top: 22px;
+  margin-bottom: 40px;
+}
+.button {
+  padding: 16px 32px;
+  border-radius: 12px;
+  background: #2A4DD0;
+  color: #F2F9FE;
+  font-weight: 600;
+  cursor: pointer;
+  transition: ease-in-out 150ms;
+  user-select: none;
+}
+
+.button:active {
+  transform: scale(0.9);
+}
+
+.btn_text {
+  cursor: pointer;
+  border-bottom: solid 2px #2A4DD0;
+  color: #2A4DD0;
+  line-height: 20px;
+  font-weight: 500;
+}
+.checks {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-bottom: 32px;
+  color: #647285;
+}
+
+p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
+/* TABLET */
+@media (max-width:1024px) {
+  .content {
+    flex-wrap: wrap-reverse;
+    gap: 52px;
+  }
+
+  .content__text {
+    justify-content: flex-start;
+  }
+
+}
+
+/* MOVIL */
+
+@media (max-width: 940px) {
+
+  .container {
+    padding: 0px;
+  }
+
+
+
+  #menu__toggle {
+    display: block;
+    z-index: 1;
+  }
+
+  .container__links {
+    display: none;
+  }
+
+  .container__links.active {
+    display: flex;
+    flex-direction: column;
+    padding: 100px 60px;
+    gap: 50px;
+    top: 0;
+    right: 0;
+    left: 35%;
+    position: fixed;
+    background: #FFFFFF;
+    height: 100vh;
+    align-items: center;
+    font-size: 2.1rem;
+  }
+
+  .container__links.dark {
+    background: #161b2b;
+  }
+  
+
+  .nav__links {
+    gap: 10px;
+    flex-direction: column;
+  }
+
+  nav {
+    width: 100%;
+    padding: 10px 20px;
+    background: #F2F9FE;
+    position: fixed;
+  }
+
+  .switch {
+    display: block;
+  }
+  
+
+  .content__hero img {
+    width: 100%;
+    padding: 120px 20px 0 20px;
+  }
+
+  .title {
+    font-size: 2.8rem;
+  }
+}
+
+
+
